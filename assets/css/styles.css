@@ -44,6 +44,15 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
+@keyframes rotateY-anim {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
 /* HEADER */
 
 /* header {
@@ -67,7 +76,9 @@ header {
 }
 .logo i {
   margin-right: 7px;
+  animation: rotateY-anim 5s linear infinite;
 }
+
 .header-nav-links {
   display: flex;
   align-items: center;
@@ -82,9 +93,7 @@ header {
 .header-nav-links li:not(:last-child) {
   margin-right: 10px;
 }
-.active {
-  color: var(--color-accent);
-}
+
 .btn-header {
   font-size: 14px;
   padding: 10px 15px;
@@ -229,7 +238,7 @@ body.modal-open {
     font-size: 18px;
   }
   .header-nav-links li:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 20px;
   }
   /* Hero */
   #hero {
