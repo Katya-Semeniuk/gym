@@ -44,7 +44,8 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
-/* Header */
+/* HEADER */
+
 /* header {
   width: 100%;
   padding: 10px;
@@ -56,6 +57,14 @@ body {
 header {
   display: none;
 }
+.logo {
+  font-size: 20px;
+  color: var(--text-white-color);
+  transition: all 250ms ease;
+}
+.logo:hover {
+  color: var(--color-accent);
+}
 .logo i {
   margin-right: 7px;
 }
@@ -65,18 +74,17 @@ header {
 }
 .header-nav-links a {
   color: var(--text-light-grey);
+  transition: all 250ms ease;
+}
+.header-nav-links a:hover {
+  color: var(--color-accent);
 }
 .header-nav-links li:not(:last-child) {
   margin-right: 10px;
 }
-
-.header-nav-links a:hover {
-  color: var(--color-accent);
-}
 .active {
   color: var(--color-accent);
 }
-
 .btn-header {
   font-size: 14px;
   padding: 10px 15px;
@@ -92,17 +100,62 @@ header {
   background-color: var(--clr-btn-accent-hover);
   color: var(--text-white-color);
 }
-/* Hero */
+
+/* HERO */
+
 #hero {
-  background-image: url(../images/hero-2.jpg);
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.6),
+      rgba(25, 28, 38, 0.6)
+    ),
+    url(../images/hero-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 560px;
+  height: 500px;
   background-color: var(--bg-black-color);
   color: var(--text-white-color);
 }
-/* Footer */
+.text-thumb {
+  font-weight: bold;
+  padding-top: 270px;
+  padding-bottom: 30px;
+  text-align: end;
+}
+
+.text-thumb h1 {
+  font-size: 48px;
+  margin-bottom: 7px;
+}
+.text-thumb p {
+  font-size: 16px;
+}
+.btn-member {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background-color: var(--clr-btn-accent);
+  border-radius: 4px;
+  border: 1px solid var(--clr-btn-accent-hover);
+  cursor: pointer;
+  color: var(--text-white-color);
+  transition: all 250ms ease;
+}
+
+.btn-member:hover {
+  background-color: var(--clr-btn-accent-hover);
+  transform: scale(1.03);
+}
+/* ABOUT */
+.advantages-list {
+  display: none;
+}
+
+/* OFFERS */
+.container {
+  margin: 0px 30px;
+}
+/* FOOter */
 footer {
   background-color: bisque;
 }
@@ -125,20 +178,42 @@ body.modal-open {
     justify-content: space-between;
     background-color: var(--bg-black-color);
   }
-  .logo {
-    font-size: 20px;
-    color: var(--color-accent);
+
+  /* Hero */
+  #hero {
+    height: 540px;
+  }
+  .text-thumb {
+    padding-top: 300px;
+  }
+  .text-thumb h1 {
+    margin-bottom: 10px;
+  }
+  .text-thumb p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  /* About */
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 /* Media query: tablets and larger (768px and up)*/
 
 @media screen and (min-width: 768px) {
-  /* Header */
+  .container {
+    margin: 0px 40px;
+  }
 }
 
 /* Large devices media screen(laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+  .container {
+    margin: 0px 60px;
+  }
   /* Header */
   header {
     padding: 10px 20px;
@@ -146,7 +221,6 @@ body.modal-open {
   .logo {
     font-size: 24px;
   }
-
   .btn-header {
     font-size: 16px;
   }
@@ -155,5 +229,20 @@ body.modal-open {
   }
   .header-nav-links li:not(:last-child) {
     margin-right: 15px;
+  }
+  /* Hero */
+  #hero {
+    height: 580px;
+  }
+
+  .text-thumb {
+    padding-right: 120px;
+  }
+  .text-thumb h1 {
+    font-size: 54px;
+  }
+  .btn-member {
+    font-size: 18px;
+    padding: 15px 20px;
   }
 }
