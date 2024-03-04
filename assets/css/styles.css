@@ -1,3 +1,14 @@
+:root {
+  --color-accent: #ed3512;
+  --text-grey-color: #615d5d;
+  --text-light-grey: #9da4bd;
+  --text-white-color: #ffffff;
+  --text-dark-color: #303030;
+  --bg-black-color: #151212;
+  --bg-white-color: #ffffff;
+  --bg-darker-white: #f7f7f7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,25 +25,83 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+}
+
 body {
   min-height: 100vh;
+  color: var(--text-dark-color);
+  font-family: "Overpass", sans-serif;
 }
 
-header {
+/* Header */
+/* header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: rgb(134, 231, 231);
+} */
+header {
+  display: none;
+}
+.header-nav-links {
+  display: flex;
+  align-items: center;
 }
 
+.header-nav-links li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header-nav-links a:hover {
+  color: var(--color-accent);
+}
+.active {
+  color: var(--color-accent);
+}
+
+.btn-header {
+  background-color: blueviolet;
+}
+/* Hero */
+#hero {
+  background-image: url(../images/hero-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 560px;
+  background-color: var(--bg-black-color);
+  color: var(--text-white-color);
+}
+/* Footer */
 footer {
   background-color: bisque;
 }
 /* 
-body {
-    color: $main-color;
-    background-color: $main-white-color;
-    font-family: $primary-font;
-    font-size: $primary-text-size;
-    letter-spacing: 0.03em;
-}
+
 body.modal-open {
     overflow: hidden;
 } */
+
+/* MEDIA */
+
+/* Media query : large or landscape phones */
+@media screen and (min-width: 576px) {
+  header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(134, 231, 231);
+  }
+}
