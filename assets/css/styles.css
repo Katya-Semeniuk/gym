@@ -2,11 +2,9 @@
   --color-accent: #ed3512;
   --clr-btn-accent: #7483ef;
   --clr-btn-accent-hover: #5e6eeb;
-  --text-grey-color: #615d5d;
   --text-light-grey: #9da4bd;
   --text-white-color: #ffffff;
-  --text-dark-color: #303030;
-  /* --bg-black-color: #151212; */
+  --text-dark-color: #262525;
   --bg-black-color: #1a1313;
   --bg-white-color: #ffffff;
   --bg-darker-white: #f7f7f7;
@@ -68,7 +66,7 @@ header {
 }
 .logo {
   font-size: 20px;
-  color: var(--text-white-color);
+  color: var(--text-light-grey);
   transition: all 250ms ease;
 }
 .logo:hover {
@@ -77,6 +75,7 @@ header {
 .logo i {
   margin-right: 7px;
   animation: rotateY-anim 5s linear infinite;
+  color: var(--text-white-color);
 }
 
 .header-nav-links {
@@ -157,17 +156,51 @@ header {
   transform: scale(1.03);
 }
 /* ABOUT */
-.advantages-list {
-  display: none;
+#about {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--bg-darker-white);
+  outline: 1px solid tomato;
 }
-
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+}
+.advantages-item {
+  font-size: 18px;
+}
+.advantages-item i {
+  margin-right: 5px;
+  color: var(--color-accent);
+}
 /* OFFERS */
 .container {
   margin: 0px 30px;
 }
 /* FOOter */
 footer {
-  background-color: bisque;
+  background-color: var(--bg-black-color);
+  padding: 12px 0;
+}
+.heading-social {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 5px;
+  color: var(--text-light-grey);
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+.social-links i {
+  color: var(--bg-white-color);
+  transition: all 250ms ease;
+}
+
+.social-links i:hover {
+  color: var(--color-accent);
 }
 /* 
 
@@ -194,7 +227,7 @@ body.modal-open {
     height: 540px;
   }
   .text-thumb {
-    padding-top: 300px;
+    padding-top: 250px;
   }
   .text-thumb h1 {
     margin-bottom: 10px;
@@ -206,7 +239,7 @@ body.modal-open {
 
   /* About */
   .advantages-list {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -216,6 +249,21 @@ body.modal-open {
 @media screen and (min-width: 768px) {
   .container {
     margin: 0px 40px;
+  }
+  /* About */
+  .advantages-item {
+    font-size: 20px;
+  }
+  /* Footer */
+  footer {
+    padding: 15px 0;
+  }
+  .heading-social {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .social-links {
+    font-size: 25px;
   }
 }
 
@@ -242,7 +290,7 @@ body.modal-open {
   }
   /* Hero */
   #hero {
-    height: 580px;
+    height: 590px;
   }
 
   .text-thumb {
