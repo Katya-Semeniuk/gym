@@ -1,5 +1,4 @@
 const openBurgerMenuEl = document.getElementById("open-burger-menu");
-
 const closeBurgerMenuEl = document.getElementById("close-burger-menu");
 const navElMob = document.getElementsByClassName("nav-mob")[0];
 const navLinksItemEls = document.getElementsByClassName("nav-links-item");
@@ -18,5 +17,6 @@ closeBurgerMenuEl.addEventListener("click", function () {
 for (let navLinksItemEl of navLinksItemEls) {
   navLinksItemEl.addEventListener("click", function () {
     navElMob.classList.remove("nav-bar");
+    openBurgerMenuEl.classList.remove("close");
   });
 }
