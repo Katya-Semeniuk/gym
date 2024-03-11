@@ -65,7 +65,7 @@ header {
   display: none;
 }
 .logo {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--text-light-grey);
   transition: all 250ms ease;
 }
@@ -94,8 +94,8 @@ header {
 }
 
 .btn-header {
-  font-size: 14px;
-  padding: 10px 15px;
+  font-size: 12px;
+  padding: 5px 10px;
   background-color: transparent;
   border-radius: 4px;
   cursor: pointer;
@@ -126,7 +126,7 @@ header {
 }
 .text-thumb {
   font-weight: bold;
-  padding-top: 270px;
+  padding-top: 150px;
   padding-bottom: 30px;
   text-align: end;
 }
@@ -214,7 +214,7 @@ body.modal-open {
 @media screen and (min-width: 576px) {
   /* Header */
   header {
-    padding: 10px;
+    padding: 5px 10px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -226,9 +226,7 @@ body.modal-open {
   #hero {
     height: 540px;
   }
-  .text-thumb {
-    padding-top: 250px;
-  }
+
   .text-thumb h1 {
     margin-bottom: 10px;
   }
@@ -274,17 +272,12 @@ body.modal-open {
   }
   /* Header */
   header {
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
   .logo {
-    font-size: 24px;
+    font-size: 22px;
   }
-  .btn-header {
-    font-size: 16px;
-  }
-  .header-nav-links a {
-    font-size: 18px;
-  }
+
   .header-nav-links li:not(:last-child) {
     margin-right: 20px;
   }
